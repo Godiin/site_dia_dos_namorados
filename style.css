@@ -67,6 +67,14 @@ audio {
   66% { transform: translateX(-200%); }
   100% { transform: translateX(0); }
 }
+.cronometro {
+  font-size: 1.4rem;
+  color: #e91e63;
+  margin-top: 2rem;
+  animation: pulse 1.5s infinite;
+  font-weight: bold;
+  text-shadow: 1px 1px #fff;
+}
 .mensagem {
   background-color: #fff0f5;
   padding: 2rem;
