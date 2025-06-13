@@ -49,7 +49,7 @@ audio {
 .carousel-track {
   display: flex;
   gap: 15px;
-  animation: scroll 5s linear infinite;
+  animation: scroll 3s linear infinite;
 }
 
 .carousel-track img {
