@@ -41,35 +41,47 @@ audio {
 }
 .carousel-container {
   width: 100%;
-  overflow: hidden;
-  border-radius: 15px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  padding: 10px 0;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
 }
 
 .carousel-track {
-  display: flex;
-  gap: 15px;
-  animation: scroll 3s linear infinite;
+  display: inline-flex;
+  gap: 10px;
+  padding: 10px;
+  scroll-snap-align: start;
 }
 
 .carousel-track img {
   height: 200px;
   width: auto;
   border-radius: 12px;
+  scroll-snap-align: start;
   transition: transform 0.3s ease;
 }
 
 .carousel-track img:hover {
   transform: scale(1.05);
 }
-
-@keyframes scroll {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+.carousel img {
+  min-width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: rotateY(10deg);
+  transition: transform 0.5s;
+}
+.carousel img:hover {
+  transform: scale(1.05) rotateY(0deg);
+}
+@keyframes slide {
+  0% { transform: translateX(0); }
+  33% { transform: translateX(-100%); }
+  66% { transform: translateX(-200%); }
+  100% { transform: translateX(0); }
 }
 .cronometro {
   font-size: 1.4rem;
