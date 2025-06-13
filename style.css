@@ -58,7 +58,7 @@ audio {
 
 .carousel-track img {
   height: 500px;
-  width: 300px;
+  width: 100px;
   border-radius: 12px;
   scroll-snap-align: start;
   transition: transform 0.3s ease;
