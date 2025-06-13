@@ -39,24 +39,28 @@ header h1 {
 audio {
   border-radius: 20px;
 }
-.carousel {
+.carousel-container {
   width: 100%;
-  overflow-x: scroll;
+  overflow-x: auto;
+  overflow-y: hidden;
   white-space: nowrap;
   padding: 10px 0;
-  border-radius: 10px;
   scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  -webkit-overflow-scrolling: touch;
+}
+
+.carousel-track {
+  display: inline-flex;
+  gap: 10px;
+  padding: 10px;
+  scroll-snap-align: start;
 }
 
 .carousel-track img {
-  width: 300px;
-  height: auto;
-  margin: 0 10px;
-  border-radius: 10px;
+  height: 200px;
+  width: auto;
+  border-radius: 12px;
   scroll-snap-align: start;
-  display: inline-block;
   transition: transform 0.3s ease;
 }
 
